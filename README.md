@@ -2,32 +2,32 @@
 
 
 
-## ✨ 功能特性
+## 功能特性
 
-### 🎯 核心功能
+### 核心功能
 - **双模型支持**
   - **YOLO-Seg**: 端到端分割，速度快，适合实时场景
   - **YOLO + MobileSAM**: 联合推理，精度高，边缘更精细
   
 - **多种检测模式**
-  - 📹 实时摄像头监测
-  - 🎬 视频文件检测（支持 MP4/AVI/MOV/MKV/WMV/FLV）
+  - 实时摄像头监测
+  - 视频文件检测（支持 MP4/AVI/MOV/MKV/WMV/FLV）
   
 - **智能追踪与平滑**
   - IoU 匹配算法实现目标追踪
   - EMA (指数移动平均) 平滑框抖动
   - 隔帧优化提升 FPS
 
-### 🛠️ 高级特性
-- ⚡ **多设备支持**: CPU / CUDA GPU
-- 🎯 **类别过滤**: 支持 person, car, plane, bike 等类别筛选
-- 🚀 **TensorRT 加速**: 支持 `.engine` 格式模型
-- 📊 **实时性能监控**: FPS 显示、处理时间统计
-- 🎮 **视频控制**: 播放/暂停、进度条拖动、帧跳转
+### 高级特性
+- **多设备支持**: CPU / CUDA GPU
+- **类别过滤**: 支持 person, car, plane, bike 等类别筛选
+- **TensorRT 加速**: 支持 `.engine` 格式模型
+- **实时性能监控**: FPS 显示、处理时间统计
+- **视频控制**: 播放/暂停、进度条拖动、帧跳转
 
 ---
 
-## 💻 系统要求
+## 系统要求
 
 ### 基础环境
 - Python 3.7+
@@ -39,7 +39,7 @@
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
 ### 1. 克隆项目
 ```bash
@@ -113,7 +113,7 @@ run.bat
 
 ---
 
-## 📁 项目结构
+## 项目结构
 
 ```
 video-segmentation-system/
@@ -188,7 +188,7 @@ video-segmentation-system/
 
 ---
 
-## ❓ 常见问题
+## 常见问题
 
 ### Q1: 如何提升检测速度？
 - 使用 CUDA GPU 加速
@@ -215,7 +215,7 @@ video-segmentation-system/
 
 ---
 
-## 🤝 贡献指南
+## 贡献指南
 
 欢迎贡献代码、报告问题或提出建议！
 
@@ -227,7 +227,7 @@ video-segmentation-system/
 
 ---
 
-## 🙏 致谢
+## 致谢
 
 - [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) - YOLO 实现
 - [MobileSAM](https://github.com/ChaoningZhang/MobileSAM) - 轻量级 SAM 模型
@@ -237,8 +237,6 @@ video-segmentation-system/
 
 <div align="center">
 
-**⭐ 如果这个项目对你有帮助，请给个 Star！⭐**
-
-Made with ❤️ by [Your Name]
+**如果这个项目对你有帮助，请给个 Star**
 
 </div>

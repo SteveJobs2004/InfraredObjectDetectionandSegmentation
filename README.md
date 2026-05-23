@@ -1,34 +1,6 @@
 # 视频分割检测系统
 
-<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-green.svg)
-![YOLO](https://img.shields.io/badge/YOLO-v8-red.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-基于 YOLO 和 MobileSAM 的智能视频分割检测系统，支持实时监测和视频文件分析。
-
-[功能特性](#功能特性) • [快速开始](#快速开始) • [使用说明](#使用说明) • [项目结构](#项目结构) • [技术细节](#技术细节)
-
-</div>
-
----
-
-## 📋 目录
-
-- [功能特性](#功能特性)
-- [系统要求](#系统要求)
-- [快速开始](#快速开始)
-- [使用说明](#使用说明)
-- [项目结构](#项目结构)
-- [技术细节](#技术细节)
-- [性能优化](#性能优化)
-- [常见问题](#常见问题)
-- [贡献指南](#贡献指南)
-- [许可证](#许可证)
-
----
 
 ## ✨ 功能特性
 
@@ -182,42 +154,7 @@ video-segmentation-system/
 
 ---
 
-## 🔬 技术细节
 
-### 工作流 A: YOLO-Seg 纯分割模式
-
-```
-原始帧 → YOLO-Seg 推理 → 多边形掩码 → IoU 匹配追踪 → EMA 平滑 → 渲染输出
-```
-
-**特点**:
-- 单模型端到端，速度快 (30-60 FPS)
-- 直接输出多边形顶点坐标
-- 适合实时场景
-
-**关键算法**:
-- **IoU 匹配**: 计算检测框交并比，贪心匹配同一目标
-- **EMA 平滑**: `Current_Box = 0.5 * New_Box + 0.5 * Old_Box`
-- **质心计算**: 使用图像矩 `cv2.moments()` 计算多边形质心
-
-### 工作流 B: YOLO + MobileSAM 联合模式
-
-```
-原始帧 → YOLO 检测框 → 降采样 → SAM Encoding → SAM 分割 → 轮廓提取 → 坐标映射 → 渲染输出
-```
-
-**特点**:
-- 检测 + 提示 + 分割组合，精度高
-- SAM 边缘更精细，适合高质量分析
-- 隔帧优化提升性能 (10-20 FPS)
-
-**关键技术**:
-- **Prompt Engineering**: YOLO 框作为 SAM 的提示输入
-- **降采样优化**: 图像缩小 0.5 倍加速 SAM 推理
-- **轮廓提取**: `cv2.findContours()` + `CHAIN_APPROX_SIMPLE`
-- **隔帧策略**: 每 N 帧调用一次 SAM，中间帧复用结果
-
----
 
 ## ⚡ 性能优化
 
@@ -282,12 +219,7 @@ video-segmentation-system/
 
 欢迎贡献代码、报告问题或提出建议！
 
-### 贡献流程
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+
 
 
 
